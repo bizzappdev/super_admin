@@ -19,18 +19,15 @@ class res_users(osv.osv):
             except:
                 continue
 
-
-
 res_users()
 
 
 class module(osv.osv):
     _inherit = "ir.module.module"
-    
+
     def button_immediate_install(self, cr, uid, ids, context=None):
-        print "999999999999999999999999999999999(((("
         res = super(module, self).button_immediate_install(cr, uid, ids, context=context)
-        
+
         for app, kind, gs in self.pool.get('res.groups').get_groups_by_application(cr, SUPERUSER_ID):
             try:
                 if kind == 'selection':
@@ -39,6 +36,6 @@ class module(osv.osv):
                     for g in gs:
                         self.pool.get('res.users').write(cr, SUPERUSER_ID , [SUPERUSER_ID],{name_boolean_group(g.id):True})
             except :
-             
+
                 continue
         return res

@@ -10,7 +10,7 @@
         Mark All Super Admin users as member of all group by default
     """,
     'author': 'Ruchir Shukla',
-    'website': '',
+    'website': 'www.bizzappdev.com',
     'depends': [],
     'init_xml': [],
     'update_xml': [
