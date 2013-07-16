@@ -19,6 +19,10 @@
     'demo_xml': [],
     'test': [
     ],
+    'css' : [
+        "static/src/css/base.css",
+    ],
+    'js': ['static/src/js/attachment.js'],
     'installable': True,
     'auto_install': True,
 }
